@@ -8,7 +8,6 @@
   font-size: 40px;
   margin: 5px;
   text-align: right;
-
 }
 
 .calculator-body {
@@ -31,6 +30,6 @@ button {
   width: 50%;
 }
 
-.end{
+.end {
   background-color: rgb(231, 105, 60);
 }
