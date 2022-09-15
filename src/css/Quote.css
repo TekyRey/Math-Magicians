@@ -4,9 +4,9 @@
   min-height: 280px;
   padding: 2.5rem;
   margin: 8rem auto;
-  background: #030413;
+  background: #ff4fb2;
   border-radius: 4px;
-  box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 1px #ffbfe1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
