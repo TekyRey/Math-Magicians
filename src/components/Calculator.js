@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import calculate from '../logic/calculate.js';
-import { useState } from 'react';
+import React, { useState } from "react";
+import calculate from "../logic/calculate";
+import "../css/Calculator.css";
 
 const Calculator = () => {
   const [input, setInput] = useState({
@@ -8,7 +8,6 @@ const Calculator = () => {
       next: null,
       operator: null,
   });
-
   const handleClick = (e) => {
     const result = calculate(input, e.target.textContent);
     setInput(result);
@@ -22,45 +21,82 @@ const Calculator = () => {
 
       const { total, next, operation } = input;
     return (
-      <div className="calculator-body">
-        <div className="result" onChange={resultDisplayClick}>
-          <p>{total}
+      <div className="overall">
+        <div className="result-span" onChange={resultDisplayClick}>
+            {total}
             {operation}
-            {next}</p>
+            {next}
         </div>
-        <div className="button">
-          <button onClick={handleClick} name="AC" type="button">AC</button>
-          <button onClick={handleClick} name="+/-" type="button">+/-</button>
-          <button onClick={handleClick} name="%" type="button">%</button>
-          <button onClick={handleClick} className='end' name="/" type="button">÷</button>
-          <br />
+        <div className="grid-one">
+          <button onClick={handleClick} type="button" className="btn delete number">
+            AC
+          </button>
+          <button onClick={handleClick} type="button" className="btn number number">
+            +/-
+          </button>
+          <button onClick={handleClick} type="button" className="btn clear number">
+            %
+          </button>
+          <button onClick={handleClick} type="button" className="btn  equal-to operator">
+            ÷
+          </button>
+        </div>
+        <div className="grid-two">
+          <button onClick={handleClick} type="button" className="btn number">
+            7
+          </button>
+          <button onClick={handleClick} type="button" className="btn number">
+            8
+          </button>
+          <button onClick={handleClick} type="button" className="btn number">
+            9
+          </button>
+          <button onClick={handleClick} type="button" className="btn number operator">
+            x
+          </button>
+        </div>
+        <div className="grid-three">
+          <button onClick={handleClick} type="button" className="btn number">
+            4
+          </button>
+          <button onClick={handleClick} type="button" className="btn number">
+            5
+          </button>
+          <button onClick={handleClick} type="button" className="btn number">
+            6
+          </button>
+          <button onClick={handleClick} type="button" className="btn number  operator">
+            -
+          </button>
+        </div>
+        <div className="grid-four">
+          <button onClick={handleClick} type="button" className="btn number">
+            1
+          </button>
+          <button onClick={handleClick} type="button" className="btn number">
+            2
+          </button>
+          <button onClick={handleClick} type="button" className="btn number">
+            3
+          </button>
+          <button onClick={handleClick} type="button" className="btn number operator">
+            +
+          </button>
+        </div>
+        <div className="grid-five">
+          <button onClick={handleClick} type="button" className="btn number zero">
+            0
+          </button>
+          <button onClick={handleClick} type="button" className="btn number dot">
+            .
+          </button>
 
-          <button onClick={handleClick} name="7" type="button">7</button>
-          <button onClick={handleClick} name="8" type="button">8</button>
-          <button onClick={handleClick} name="9" type="button">9</button>
-          <button onClick={handleClick} className='end' name="x" type="button">x</button>
-          <br />
-
-          <button onClick={handleClick} name="4" type="button">4</button>
-          <button onClick={handleClick} name="5" type="button">5</button>
-          <button onClick={handleClick} name="6" type="button">6</button>
-          <button onClick={handleClick} className='end' name="-" type="button">-</button>
-          <br />
-
-          <button onClick={handleClick} name="1" type="button">1</button>
-          <button onClick={handleClick} name="2" type="button">2</button>
-          <button onClick={handleClick} name="3" type="button">3</button>
-          <button onClick={handleClick} className='end' name="+" type="button">+</button>
-          <br />
-
-          <button onClick={handleClick} className='btn' name="0" type="button">0</button>
-          <button onClick={handleClick} name="." type="button">.</button>
-          <button onClick={handleClick} className='end' name="=" type="button">=</button>
-          <br />
+          <button onClick={handleClick} type="button" className="btn number operator">
+            =
+          </button>
         </div>
       </div>
     );
-  }
-
+}
 
 export default Calculator;
