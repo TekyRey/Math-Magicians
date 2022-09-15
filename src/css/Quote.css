@@ -39,8 +39,8 @@ a {
 }
 
 .buttons {
-  background-color: #d29720;
-  color: #f2f2f2;
+  background-color: #c0dff6;
+  color: #453c67;
   display: flex;
   justify-content: space-around;
   padding: 0.5rem 0;
@@ -59,5 +59,5 @@ a {
 }
 
 .buttons:hover {
-  background-color: #5a57ec;
+  background-color: #ffbae0;
 }
