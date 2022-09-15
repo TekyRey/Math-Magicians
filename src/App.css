@@ -1,35 +1,12 @@
-.result {
-  height: 60px;
-  background-color: #bbb;
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.result p {
-  font-size: 40px;
-  margin: 5px;
-  text-align: right;
-}
-
-.calculator-body {
-  max-width: 400px;
-  margin: auto;
-}
-
-.button {
-  display: block;
-  background-color: rgb(112, 111, 111);
-}
-
-button {
-  width: 25%;
-  height: 60px;
-  font-size: 30px;
-}
-
-.btn {
-  width: 50%;
-}
-
-.end {
-  background-color: rgb(231, 105, 60);
+body {
+  background: url(./assets/images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
